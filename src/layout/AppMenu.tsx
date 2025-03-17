@@ -10,14 +10,32 @@ const AppMenu = () => {
       label: 'Dashboards',
       items: [
         {
-          label: 'Dashboard',
-          icon: 'pi pi-fw pi-home',
-          to: `${baseUrlFrontend}`,
+          label: 'My Vendor Data',
+          to: `/`,
         },
         {
-          label: 'Vendor Dashboard',
-          icon: 'pi pi-fw pi-user-plus',
-          to: `${baseUrlFrontend}/dashboard/vendor-dashboard`,
+          label: 'Request for Quotations',
+          to: `rfq-list`,
+        },
+        {
+          label: 'Supplier Quotations',
+          to: `/`,
+        },
+        {
+          label: 'Purchase Orders',
+          to: `rfq-list`,
+        },
+        {
+          label: 'Purchase Receipts/ My Deliveries',
+          to: `/`,
+        },
+        {
+          label: 'Purchase Invoices/ My Sales',
+          to: `rfq-list`,
+        },
+        {
+          label: 'My Payments',
+          to: `/`,
         },
       ],
     },

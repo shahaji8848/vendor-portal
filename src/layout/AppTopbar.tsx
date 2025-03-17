@@ -1,20 +1,14 @@
 /* eslint-disable @next/next/no-img-element */
 
-import { Link } from "react-router-dom";
-import { classNames } from "primereact/utils";
-import React, {
-  forwardRef,
-  useContext,
-  useImperativeHandle,
-  useRef,
-} from "react";
-import { AppTopbarRef } from "../types/layout";
-import { LayoutContext } from "./context/layoutcontext";
-import { baseUrlBackend, baseUrlFrontend } from "../utils/BasePath";
+import { Link } from 'react-router-dom';
+import { classNames } from 'primereact/utils';
+import React, { forwardRef, useContext, useImperativeHandle, useRef } from 'react';
+import { AppTopbarRef } from '../types/layout';
+import { LayoutContext } from './context/layoutcontext';
+import { baseUrlBackend, baseUrlFrontend } from '../utils/BasePath';
 
 const AppTopbar = forwardRef<AppTopbarRef>((props, ref) => {
-  const { layoutConfig, layoutState, onMenuToggle, showProfileSidebar } =
-    useContext(LayoutContext);
+  const { layoutConfig, layoutState, onMenuToggle, showProfileSidebar } = useContext(LayoutContext);
   const menubuttonRef = useRef(null);
   const topbarmenuRef = useRef(null);
   const topbarmenubuttonRef = useRef(null);
@@ -28,22 +22,11 @@ const AppTopbar = forwardRef<AppTopbarRef>((props, ref) => {
   return (
     <div className="layout-topbar">
       <Link to={`${baseUrlFrontend}`} className="layout-topbar-logo">
-        <img
-          src={`https://upload.wikimedia.org/wikipedia/en/thumb/8/86/Jio_Financial_Services_Logo.svg/1200px-Jio_Financial_Services_Logo.svg.png`}
-          width="47.22px"
-          height={""}
-          style={{ height: "45px !Important" }}
-          alt="logo"
-        />
-        <span>Jio Leasing Services Ltd</span>
+        <i className="pi pi-user"></i>
+        <span>RSPL</span>
       </Link>
 
-      <button
-        ref={menubuttonRef}
-        type="button"
-        className="p-link layout-menu-button layout-topbar-button"
-        onClick={onMenuToggle}
-      >
+      <button ref={menubuttonRef} type="button" className="p-link layout-menu-button layout-topbar-button" onClick={onMenuToggle}>
         <i className="pi pi-bars" />
       </button>
 
@@ -58,9 +41,8 @@ const AppTopbar = forwardRef<AppTopbarRef>((props, ref) => {
 
       <div
         ref={topbarmenuRef}
-        className={classNames("layout-topbar-menu", {
-          "layout-topbar-menu-mobile-active":
-            layoutState?.profileSidebarVisible,
+        className={classNames('layout-topbar-menu', {
+          'layout-topbar-menu-mobile-active': layoutState?.profileSidebarVisible,
         })}
       >
         {/* <button type="button" className="p-link layout-topbar-button">
@@ -71,16 +53,8 @@ const AppTopbar = forwardRef<AppTopbarRef>((props, ref) => {
                     <i className="pi pi-user"></i>
                     <span>Profile</span>
                 </button> */}
-        <button
-          type="button"
-          className="p-link layout-topbar-button"
-          onClick={() => (window.location.href = "/app")}
-        >
-          <img
-            src={`https://erp-uat-jiolease.8848digitalerp.com/assets/erpnext/images/erpnext-logo.svg`}
-            alt="icon"
-            className="h-2rem"
-          />
+        <button type="button" className="p-link layout-topbar-button" onClick={() => (window.location.href = '/app')}>
+          <i className="pi pi-cog"></i>
           <span>Settings</span>
         </button>
       </div>
@@ -88,6 +62,6 @@ const AppTopbar = forwardRef<AppTopbarRef>((props, ref) => {
   );
 });
 
-AppTopbar.displayName = "AppTopbar";
+AppTopbar.displayName = 'AppTopbar';
 
 export default AppTopbar;
