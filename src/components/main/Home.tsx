@@ -4,24 +4,6 @@ import { baseUrlFrontend } from '../../utils/BasePath';
 import HomePageCards from '../../cards/HomePageCards';
 import TreeTableComponent from '../../tables/TreeTableComponent';
 const Home = () => {
-  // const [show, setShow] = useState(false);
-
-  // const dataForForm = {
-  //   deviceType: null,
-  //   deviceName: null,
-  //   deviceCost: null,
-  //   gst: null,
-  //   roi: null,
-  //   costOfFundsOperating: null,
-  //   accDepreciationRate: null,
-  //   taxDepreciationRate: null,
-  //   residualValueOfAsset: null,
-  //   otherExpenses: null,
-  //   creditCost: null,
-  //   taxRate: null,
-  //   borrowings: null,
-  //   equity: null,
-  // };
   const items = [
     {
       label: 'Dashboards',
