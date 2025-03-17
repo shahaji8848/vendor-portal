@@ -9,10 +9,10 @@ const AppMenu = () => {
     {
       label: 'Dashboards',
       items: [
-        {
-          label: 'My Vendor Data',
-          to: `/`,
-        },
+        // {
+        //   label: 'My Vendor Data',
+        //   to: `/`,
+        // },
         {
           label: 'Request for Quotations',
           to: `rfq-list`,

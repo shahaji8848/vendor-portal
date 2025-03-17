@@ -151,23 +151,23 @@ const daraForTreeTable = [
 export default function TreeTableComponent() {
   //   const [globalFilter, setGlobalFilter] = useState('');
 
-  const getHeader = () => {
-    return (
-      <div className="flex justify-content-end">
-        {/* <IconField iconPosition="left">
-          <InputIcon className="pi pi-search" />
-          <InputText type="search" onInput={(e) => setGlobalFilter(e.target.value)} placeholder="Global Search" />
-        </IconField> */}
-      </div>
-    );
-  };
+  // const getHeader = () => {
+  //   return (
+  //     <div className="flex justify-content-end">
+  //       {/* <IconField iconPosition="left">
+  //         <InputIcon className="pi pi-search" />
+  //         <InputText type="search" onInput={(e) => setGlobalFilter(e.target.value)} placeholder="Global Search" />
+  //       </IconField> */}
+  //     </div>
+  //   );
+  // };
 
-  const header = getHeader();
+  // const header = getHeader();
 
   return (
-    <div className="card p-0">
+    <div className=" p-0">
       <div className="flex justify-content-center mb-4"></div>
-      <TreeTable value={daraForTreeTable} removableSort header={header} showGridlines tableStyle={{ minWidth: '50rem' }}>
+      <TreeTable value={daraForTreeTable} removableSort showGridlines tableStyle={{ minWidth: '50rem' }}>
         <Column field="id" header="ID" style={{ width: '60px' }} />
         <Column field="rfqId" header="RFQ ID" expander filter filterPlaceholder="" />
         <Column field="rfqDate" header="RFQ Date" filter filterPlaceholder="" />
