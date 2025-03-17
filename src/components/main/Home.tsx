@@ -1,6 +1,4 @@
-import { Link } from 'react-router-dom';
 import Crump from '../../BreadCrump/Crump';
-import { baseUrlFrontend } from '../../utils/BasePath';
 import HomePageCards from '../../cards/HomePageCards';
 import TreeTableComponent from '../../tables/TreeTableComponent';
 const Home = () => {

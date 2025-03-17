@@ -4,7 +4,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import { LayoutProvider } from './layout/context/layoutcontext';
 import { Suspense } from 'react';
 import Layout from './layout/layout';
-import ProtectedRoutes from './utils/ProtectedRoutes';
+// import ProtectedRoutes from './utils/ProtectedRoutes';
 import { routes } from './utils/RoutesConfis';
 
 function App() {

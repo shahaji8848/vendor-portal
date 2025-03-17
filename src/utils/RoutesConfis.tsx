@@ -1,14 +1,11 @@
-import { Component } from 'react';
-import AllDevices from '../components/calculator/AllDevices';
-import FormPage from '../components/calculator/FormPage';
-import DetailTable from '../components/detail/DetailTable';
-import IanAll from '../components/IAN/IanAll';
-import IanDetails from '../components/IAN/IanDetails';
-import IanNewForm from '../components/IAN/IanNewFrom';
 import Home from '../components/main/Home';
-import IanStatus from '../components/IAN/IanStatus';
 import RFQList from '../pages/RFQ-list/RFQList';
 import CommonForm from '../components/CommonForm/CommonForm';
+import SupplierQuatations from '../pages/supplier-quatations/SupplierQuatations';
+import PurchaseOrders from '../pages/purchase-orders/PurchaseOrders';
+import PROrMyDeleveries from '../pages/purchase-receipy-my-deleveries/PROrMyDeleveries';
+import PIorMySales from '../pages/pi-my-sales/PIorMySales';
+import MyPayments from '../pages/my-payments/MyPayments';
 
 export const routes = [
   {
@@ -25,23 +22,23 @@ export const routes = [
   },
   {
     path: 'supplier-quotations',
-    component: RFQList,
+    component: SupplierQuatations,
   },
   {
     path: 'purchase-orders',
-    component: RFQList,
+    component: PurchaseOrders,
   },
   {
-    path: 'purchase-receipts/my-deliveries',
-    component: RFQList,
+    path: 'purchase-receipts-my-deliveries',
+    component: PROrMyDeleveries,
   },
   {
-    path: 'purchase-invoices/my-sales',
-    component: RFQList,
+    path: 'purchase-invoices-my-sales',
+    component: PIorMySales,
   },
   {
     path: 'my-payments',
-    component: RFQList,
+    component: MyPayments,
   },
   // {
   //   path: "dashboard/details/:name",

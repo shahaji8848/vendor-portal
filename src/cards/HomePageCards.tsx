@@ -1,6 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { baseUrlFrontend } from '../utils/BasePath';
 
 interface Data {
   title: string;
