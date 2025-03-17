@@ -34,19 +34,6 @@ function App() {
     },
   ]);
 
-  // const tokenParams: any = {
-  //   useToken: true,
-  //   token: async () => {
-  //     const response = await fetch(
-  //       "http://localhost:8003/api/method/jio_fiber.custom_purchase.customization.purchase_invoice.api.token_key"
-  //     );
-  //     console.log(response, "console for response");
-  //     const data: TokenResponse = await response.json();
-  //     return `${data?.message[0]}:${data?.message[1]}`;
-  //   },
-  //   type: "token",
-  // };
-
   return (
     <div className="App">
       <PrimeReactProvider>
