@@ -1,0 +1,53 @@
+.modalForm{
+ width: 50vw !important; 
+}
+@media(max-width:1200px){
+    .modalForm{
+        width: 70vw !important;
+    }
+}
+
+/* .modalForm label{
+    color: var(--primary);
+}
+.tableList{
+    margin:0 7rem !important;
+}
+.fs{
+    color: var(--primary) ;
+} */
+
+/* .tableRow{
+    font-size: var(--font-small);
+    width: 25% ;
+    transition: all 0.3s;
+    text-align: start;
+} */
+/* .tableRow:hover{
+    background-color: var(--primary);
+    color: azure;
+    font-weight: 400;
+} */
+
+/* .tableRow2{
+    text-align: center;
+    transition: all 0.3s;
+    text-align: end;
+    font-size: var(--font-small);
+} */
+/* .tableRow2:hover{
+    background-color: var(--primary);
+    color: azure;
+    font-weight: 400;
+} */
+
+/* .tableHeader{
+    text-align: right;
+    transition: all 0.3s;
+    font-size: var(--font-small) !important;
+} */
+/* .tableHeader:hover{
+    background-color: var(--primary);
+    color: azure;
+    font-weight: 400;
+} */
