@@ -1,10 +1,10 @@
-import React, { useState, createContext } from "react";
-import { ChildContainerProps, MenuContextProps } from "../../types/layout";
+import { useState, createContext } from 'react';
+import { ChildContainerProps, MenuContextProps } from '../../types/layout';
 
 export const MenuContext = createContext({} as MenuContextProps);
 
 export const MenuProvider = ({ children }: ChildContainerProps) => {
-  const [activeMenu, setActiveMenu] = useState("");
+  const [activeMenu, setActiveMenu] = useState('');
 
   const value = {
     activeMenu,

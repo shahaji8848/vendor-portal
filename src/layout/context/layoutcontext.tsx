@@ -1,23 +1,16 @@
-import React, { useState, createContext } from "react";
-import {
-  LayoutState,
-  ChildContainerProps,
-  LayoutConfig,
-  LayoutContextProps,
-} from "../../types/layout";
+import { useState, createContext } from 'react';
+import { LayoutState, ChildContainerProps, LayoutConfig, LayoutContextProps } from '../../types/layout';
 export const LayoutContext = createContext({} as LayoutContextProps);
 
 export const LayoutProvider = ({ children }: ChildContainerProps) => {
   const [layoutConfig, setLayoutConfig] = useState<LayoutConfig>({
     ripple: false,
-    inputStyle: "outlined",
-    menuMode: "static",
-    colorScheme: "light",
-    theme: "lara-light-indigo",
+    inputStyle: 'outlined',
+    menuMode: 'static',
+    colorScheme: 'light',
+    theme: 'lara-light-indigo',
     scale: 14,
   });
-
-  
 
   const [layoutState, setLayoutState] = useState<LayoutState>({
     staticMenuDesktopInactive: false,
@@ -27,8 +20,7 @@ export const LayoutProvider = ({ children }: ChildContainerProps) => {
     staticMenuMobileActive: false,
     menuHoverActive: false,
   });
- 
-  
+
   const onMenuToggle = () => {
     if (isOverlay()) {
       setLayoutState((prevLayoutState) => ({
@@ -58,7 +50,7 @@ export const LayoutProvider = ({ children }: ChildContainerProps) => {
   };
 
   const isOverlay = () => {
-    return layoutConfig.menuMode === "overlay";
+    return layoutConfig.menuMode === 'overlay';
   };
 
   const isDesktop = () => {
@@ -74,7 +66,5 @@ export const LayoutProvider = ({ children }: ChildContainerProps) => {
     showProfileSidebar,
   };
 
-  return (
-    <LayoutContext.Provider value={value}>{children}</LayoutContext.Provider>
-  );
+  return <LayoutContext.Provider value={value}>{children}</LayoutContext.Provider>;
 };
