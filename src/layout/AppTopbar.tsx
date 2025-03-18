@@ -1,19 +1,17 @@
-/* eslint-disable @next/next/no-img-element */
-
 import { Link } from 'react-router-dom';
 import { classNames } from 'primereact/utils';
-import React, { forwardRef, useContext, useImperativeHandle, useRef } from 'react';
-import { AppTopbarRef } from '../types/layout';
+import { forwardRef, Ref, useContext, useImperativeHandle, useRef } from 'react';
+// import { AppTopbarRef } from '../types/layout';
 import { LayoutContext } from './context/layoutcontext';
-import { baseUrlBackend, baseUrlFrontend } from '../utils/BasePath';
+import { baseUrlFrontend } from '../utils/BasePath';
 
-const AppTopbar = forwardRef<AppTopbarRef>((props, ref) => {
-  const { layoutConfig, layoutState, onMenuToggle, showProfileSidebar } = useContext(LayoutContext);
+const AppTopbar = forwardRef<any>((ref) => {
+  const { layoutState, onMenuToggle, showProfileSidebar } = useContext(LayoutContext);
   const menubuttonRef = useRef(null);
   const topbarmenuRef = useRef(null);
   const topbarmenubuttonRef = useRef(null);
 
-  useImperativeHandle(ref, () => ({
+  useImperativeHandle(ref as Ref<unknown> | undefined, () => ({
     menubutton: menubuttonRef.current,
     topbarmenu: topbarmenuRef.current,
     topbarmenubutton: topbarmenubuttonRef.current,

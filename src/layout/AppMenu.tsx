@@ -1,8 +1,6 @@
-/* eslint-disable @next/next/no-img-element */
 import AppMenuitem from './AppMenuitem';
 import { MenuProvider } from './context/menucontext';
 import { AppMenuItem } from '../types/layout';
-import { baseUrlFrontend } from '../utils/BasePath';
 
 const AppMenu = () => {
   const model: AppMenuItem[] = [
